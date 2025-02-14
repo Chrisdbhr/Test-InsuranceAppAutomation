@@ -40,7 +40,7 @@ namespace InsuranceAppAutomation
                 "Engine Performance error not shown. Expected 'This field is mandatory'");
 
             // Fill invalid data
-            vehicleDataPage.EnterEnginePerformance("Yes", true);
+            vehicleDataPage.EnterEnginePerformance("Yes");
 
             Assert.That(vehicleDataPage.IsEnginePerformanceErrorDisplayed(),
                 "Engine Performance error not shown. Expected 'Must be a number between 1 and 2000'");
@@ -49,7 +49,7 @@ namespace InsuranceAppAutomation
             vehicleDataPage.TakeScreenshot("validation-errors");
 
             // Fill valid data
-            vehicleDataPage.EnterEnginePerformance("150");
+            vehicleDataPage.EnterEnginePerformance("150", true);
 
             vehicleDataPage.TakeScreenshot("valid-data-entered");
         }
