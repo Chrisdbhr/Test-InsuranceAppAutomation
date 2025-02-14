@@ -27,7 +27,7 @@ dotnet test
 
 | Screenshot | Description |
 |------------|-------------|
-| ![Validation Errors](./screenshots/validation-errors.png) | **Validation Errors**: Error messages shown for mandatory fields. |
+| ![Validation Errors](./screenshots/validation-errors.png) | **Validation Errors**: Error messages shown when filling wrong data in field. |
 | ![Valid Data Entered](./screenshots/vehicle-data-filled.png) | **Valid Data Filled**: Form with valid data filled. |
 
 ## Key Components
