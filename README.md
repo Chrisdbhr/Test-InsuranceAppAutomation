@@ -17,3 +17,21 @@ Automated test suite for insurance application using Selenium WebDriver (C#) wit
 1. Clone repository:
 ```bash
 git clone https://github.com/Chrisdbhr/Test-InsuranceAppAutomation.git
+```
+2. Restore packages and run tests:
+```bash
+dotnet restore
+dotnet test
+```
+## Test Evidence Screenshots
+
+| Screenshot | Description |
+|------------|-------------|
+| ![Validation Errors](./screenshots/validation-errors.png) | **Validation Errors**: Error messages shown for mandatory fields when the form is submitted empty. |
+| ![Valid Data Entered](./screenshots/valid-data-entered.png) | **Valid Data Submission**: Form with properly filled vehicle data before submission. |
+
+## Key Components
+- **Page Objects**: Contains element locators and page interactions
+- **BasePage**: Shared screenshot functionality
+- **NUnit**: Test framework
+- **WebDriverManager**: Automatic browser driver management
