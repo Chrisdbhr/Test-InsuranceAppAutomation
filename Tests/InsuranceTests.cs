@@ -82,12 +82,15 @@ namespace InsuranceAppAutomation
             insurantDataPage.SelectHobbySpeeding();
             insurantDataPage.TakeScreenshot("insurant-data-filled");
             insurantDataPage.ClickNext();
+
+            // Other steps should be to fill out the other pages, but I kept only these two for simplicity.
+
         }
 
         [TearDown]
         public void Teardown()
         {
-            // dispose resources
+            // Dispose resources
             driver.Quit();
             driver.Dispose();
         }
