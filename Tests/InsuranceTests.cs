@@ -29,10 +29,16 @@ namespace InsuranceAppAutomation
         [Test]
         public void VehicleDataFormValidations()
         {
+            vehicleDataPage.SelectAutomobileTypeOfInsurance();
+
             // Verify Make validation
             Assert.That(vehicleDataPage.IsMakeErrorDisplayed(),
                 "Make field error not shown. Expected 'Select an option'");
 
+            // Filling a valid data
+            vehicleDataPage.SelectMake("Audi");
+
+            // Simulating field selection
             vehicleDataPage.EnterEnginePerformance("");
 
             // Verify Engine Performance validation
@@ -57,6 +63,8 @@ namespace InsuranceAppAutomation
         [Test]
         public void TestInsuranceFormSubmission()
         {
+            vehicleDataPage.SelectAutomobileTypeOfInsurance();
+
             // Step 1: Enter Vehicle Data
             vehicleDataPage.SelectMake("Audi");
             vehicleDataPage.EnterEnginePerformance("150");

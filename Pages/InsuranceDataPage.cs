@@ -6,17 +6,17 @@ namespace InsuranceAppAutomation
     public class InsurantDataPage(IWebDriver driver) : BasePage(driver)
     {
         // Elements
-        IWebElement FirstNameInput => driver.FindElement(By.Id("firstname"));
-        IWebElement LastNameInput => driver.FindElement(By.Id("lastname"));
-        IWebElement DateOfBirthInput => driver.FindElement(By.Id("birthdate"));
-        IWebElement GenderMaleRadio => driver.FindElement(By.CssSelector("input#gendermale + span.ideal-radio"));
-        IWebElement StreetAddressInput => driver.FindElement(By.Id("streetaddress"));
-        IWebElement CountryDropdown => driver.FindElement(By.Id("country"));
-        IWebElement ZipCodeInput => driver.FindElement(By.Id("zipcode"));
-        IWebElement CityInput => driver.FindElement(By.Id("city"));
-        IWebElement OccupationDropdown => driver.FindElement(By.Id("occupation"));
-        IWebElement HobbiesSpeedingCheckbox => driver.FindElement(By.CssSelector("input#speeding + span.ideal-check"));
-        IWebElement NextButton => driver.FindElement(By.Id("nextenterproductdata"));
+        IWebElement FirstNameInput => Driver.FindElement(By.Id("firstname"));
+        IWebElement LastNameInput => Driver.FindElement(By.Id("lastname"));
+        IWebElement DateOfBirthInput => Driver.FindElement(By.Id("birthdate"));
+        IWebElement GenderMaleRadio => Driver.FindElement(By.CssSelector("input#gendermale + span.ideal-radio"));
+        IWebElement StreetAddressInput => Driver.FindElement(By.Id("streetaddress"));
+        IWebElement CountryDropdown => Driver.FindElement(By.Id("country"));
+        IWebElement ZipCodeInput => Driver.FindElement(By.Id("zipcode"));
+        IWebElement CityInput => Driver.FindElement(By.Id("city"));
+        IWebElement OccupationDropdown => Driver.FindElement(By.Id("occupation"));
+        IWebElement HobbiesSpeedingCheckbox => Driver.FindElement(By.CssSelector("input#speeding + span.ideal-check"));
+        IWebElement NextButton => Driver.FindElement(By.Id("nextenterproductdata"));
 
         // Methods
         public void EnterFirstName(string firstName)

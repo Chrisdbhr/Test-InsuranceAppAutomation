@@ -6,15 +6,15 @@ namespace InsuranceAppAutomation
     public class VehicleDataPage(IWebDriver driver) : BasePage(driver)
     {
         // Elements
-        IWebElement MakeDropdown => driver.FindElement(By.Id("make"));
-        IWebElement EnginePerformanceInput => driver.FindElement(By.Id("engineperformance"));
-        IWebElement DateOfManufactureInput => driver.FindElement(By.Id("dateofmanufacture"));
-        IWebElement NumberOfSeatsDropdown => driver.FindElement(By.Id("numberofseats"));
-        IWebElement FuelTypeDropdown => driver.FindElement(By.Id("fuel"));
-        IWebElement ListPriceInput => driver.FindElement(By.Id("listprice"));
-        IWebElement LicensePlateNumberInput => driver.FindElement(By.Id("licenseplatenumber"));
-        IWebElement AnnualMileageInput => driver.FindElement(By.Id("annualmileage"));
-        IWebElement NextButton => driver.FindElement(By.Id("nextenterinsurantdata"));
+        IWebElement MakeDropdown => Driver.FindElement(By.Id("make"));
+        IWebElement EnginePerformanceInput => Driver.FindElement(By.Id("engineperformance"));
+        IWebElement DateOfManufactureInput => Driver.FindElement(By.Id("dateofmanufacture"));
+        IWebElement NumberOfSeatsDropdown => Driver.FindElement(By.Id("numberofseats"));
+        IWebElement FuelTypeDropdown => Driver.FindElement(By.Id("fuel"));
+        IWebElement ListPriceInput => Driver.FindElement(By.Id("listprice"));
+        IWebElement LicensePlateNumberInput => Driver.FindElement(By.Id("licenseplatenumber"));
+        IWebElement AnnualMileageInput => Driver.FindElement(By.Id("annualmileage"));
+        IWebElement NextButton => Driver.FindElement(By.Id("nextenterinsurantdata"));
 
         // Validation error locators
         By MakeErrorLocator => By.CssSelector("div.idealforms-field-select-one.invalid span.error");
@@ -72,7 +72,7 @@ namespace InsuranceAppAutomation
         {
             try
             {
-                new WebDriverWait(driver, TimeSpan.FromSeconds(1))
+                new WebDriverWait(Driver, TimeSpan.FromSeconds(1))
                     .Until(d => d.FindElement(MakeErrorLocator).Displayed);
                 return true;
             }
@@ -86,7 +86,7 @@ namespace InsuranceAppAutomation
         {
             try
             {
-                new WebDriverWait(driver, TimeSpan.FromSeconds(1))
+                new WebDriverWait(Driver, TimeSpan.FromSeconds(1))
                     .Until(d => d.FindElement(EnginePerfErrorLocator).Displayed);
                 return true;
             }
